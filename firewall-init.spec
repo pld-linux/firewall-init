@@ -1,20 +1,15 @@
 Summary:	Firewall SysV-init style start-up script
 Summary(pl):	Skrypt startowy firewalla
 Name:		firewall-init
-Version:	2.99.5
-Release:	2@2.4
+Version:	2.99.6
+Release:	1
 License:	GPL
 Group:		Networking/Admin
-Group(de):	Netzwerkwesen/Administration
-Group(pl):	Sieciowe/Administacyjne
-# Source0:	ftp://ftp.pld.org.pl/software/firewall-init/%{name}-%{version}.tar.gz
-# Source0-md5:	e336e02377ef26c258d8ccabeaefcf8c
-Source0:	http://aramin.one.pl/~undefine/%{name}-%{version}.tar.gz
-Patch0:		%{name}-pre.patch
+Source0:	http://ep09.pld-linux.org/~mmazur/%{name}/%{name}-%{version}.tar.bz2
+# Source0-md5:	2d2714634b48e79cccfe95e5163b4cde
 PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig
 Requires:	iptables >= 1.2.2-2
-Conflicts:	kernel < 2.3.0
 Obsoletes:	iptables-init
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,7 +24,6 @@ stopowania filtrów IP j±dra poprzez iptables(8).
 
 %prep
 %setup -q
-%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT

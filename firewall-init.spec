@@ -34,6 +34,13 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+#%%pre
+#if [ `rpm -q --queryformat='%{VERSION}' firewall-init` < '2.5' ]; then
+#	echo "You need to manually convert your rules to iptables or install"
+#	echo "firewall-init-ipchains"
+#	exit 1
+#fi
+
 %post
 /sbin/chkconfig --add firewall
 /sbin/chkconfig --add firewall-pre

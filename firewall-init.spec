@@ -6,7 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Admin
 #Source0:	http://ep09.pld-linux.org/~mmazur/%{name}/%{name}-%{version}.tar.bz2
-Source0:	%{name}/%{name}-%{version}.tar.bz2
+Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	d5c8baff7e0f111bd66b23b47d9a6ea6
 PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig

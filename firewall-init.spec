@@ -2,7 +2,7 @@ Summary:	Firewall SysV-init style start-up script
 Summary(pl):	Skrypt startowy firewalla
 Name:		firewall-init
 Version:	2.99.8
-Release:	1
+Release:	2		
 License:	GPL
 Group:		Networking/Admin
 Source0:	ftp://ftp.pld-linux.org/software/firewall-init/%{name}-%{version}.tar.bz2
@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/chkconfig --add firewall
 /sbin/chkconfig --add firewall-pre
 
-%postun
+%preun
 if [ "$1" = "0" ]; then
 	/sbin/chkconfig --del firewall
 	/sbin/chkconfig --del firewall-pre

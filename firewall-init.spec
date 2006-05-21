@@ -2,11 +2,12 @@ Summary:	Firewall SysV-init style start-up script
 Summary(pl):	Skrypt startowy firewalla
 Name:		firewall-init
 Version:	2.99.8
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Admin
 Source0:	ftp://ftp.pld-linux.org/software/firewall-init/%{name}-%{version}.tar.bz2
 # Source0-md5:	1237a67be00e5ecef53a934f86c7507b
+BuildRequires:	rpmbuild(macros) >= 1.194
 Requires(post,preun):	/sbin/chkconfig
 Requires:	iptables >= 1.2.2-2
 Requires:	rc-scripts
@@ -34,12 +35,11 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-#%%pre
-#if [ `rpm -q --queryformat='%{VERSION}' firewall-init` < '2.5' ]; then
-#	echo "You need to manually convert your rules to iptables or install"
-#	echo "firewall-init-ipchains"
-#	exit 1
-#fi
+%triggerpostun -- %{name} < 2.5
+%banner -e %{name} <<'EOF'
+You need to manually convert your rules to iptables or install
+firewall-init-ipchains
+EOF
 
 %post
 /sbin/chkconfig --add firewall

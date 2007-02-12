@@ -1,5 +1,5 @@
 Summary:	Firewall SysV-init style start-up script
-Summary(pl):	Skrypt startowy firewalla
+Summary(pl.UTF-8):   Skrypt startowy firewalla
 Name:		firewall-init
 Version:	2.99.9
 Release:	1
@@ -19,9 +19,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Firewall-init is meant to provide an easy to use interface for
 starting and stopping the kernel IP packet filter through iptables(8).
 
-%description -l pl
-Dziêki firewall-init uzyskuje siê ³atwy interfejs do startowania i
-stopowania filtrów IP j±dra poprzez iptables(8).
+%description -l pl.UTF-8
+DziÄ™ki firewall-init uzyskuje siÄ™ Å‚atwy interfejs do startowania i
+stopowania filtrÃ³w IP jÄ…dra poprzez iptables(8).
 
 %prep
 %setup -q

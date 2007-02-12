@@ -1,5 +1,5 @@
 Summary:	Firewall SysV-init style start-up script
-Summary(pl.UTF-8):   Skrypt startowy firewalla
+Summary(pl.UTF-8):	Skrypt startowy firewalla
 Name:		firewall-init
 Version:	2.99.9
 Release:	1

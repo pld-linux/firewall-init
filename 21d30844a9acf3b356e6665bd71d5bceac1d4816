@@ -1,0 +1,3 @@
+- "chkconfig --del firewall" must be in %preun
+   thx for Krzysztof Mościcki <stivi (at) kity.pl>
+- rel 2, STBR

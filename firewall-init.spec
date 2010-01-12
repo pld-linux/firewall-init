@@ -9,6 +9,7 @@ Source0:	ftp://ftp.pld-linux.org/software/firewall-init/%{name}-%{version}.tar.b
 # Source0-md5:	8a57d9efb9df6f46b4665c55d0a9450f
 BuildRequires:	rpmbuild(macros) >= 1.194
 Requires(post,preun):	/sbin/chkconfig
+Requires:	coreutils
 Requires:	iptables >= 1.2.2-2
 Requires:	rc-scripts
 Obsoletes:	iptables-init
